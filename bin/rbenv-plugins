@@ -17,5 +17,6 @@ PLUGIN_NAME=$(basename $0)
 source "${PLUGINS_DIR}/${PLUGIN_NAME}/lib/rbenvhelpers"
 
 for PLUGIN_DIR in `find ${PLUGINS_DIR} -depth 1`; do
+  echo ">Updating ${PLUGIN_DIR}"
   execute_command_and_restore_directory update_git_repository ${PLUGIN_DIR}
 done 
