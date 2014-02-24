@@ -17,7 +17,5 @@ PLUGIN_NAME=$(basename $0)
 source "${RBENV_ROOT}/plugins/${PLUGIN_NAME}/lib/rbenvhelpers"
 
 for PLUGIN_DIR in `ls ${PLUGINS_DIR}`; do
-  cd $PLUGIN_DIR
-  git pull
-  cd $PLUGINS_DIR
+  execute_command_and_restore_directory update_git_repository ${PLUGIN_DIR}
 done 
