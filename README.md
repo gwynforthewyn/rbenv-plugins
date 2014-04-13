@@ -1,4 +1,4 @@
-## Welcome to rbenv-selfupdate
+## Welcome to rbenv-plugins
 
 ## Installation
 
